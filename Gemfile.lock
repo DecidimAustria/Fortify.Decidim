@@ -184,15 +184,6 @@ GIT
       deface (>= 1.5)
       sassc (~> 2.3)
 
-GIT
-  remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 03e6c98e85a00fe47f8db2726f1a1a98e808efda
-  branch: master
-  specs:
-    decidim-term_customizer (0.28.0)
-      decidim-admin (~> 0.28.0)
-      decidim-core (~> 0.28.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -927,7 +918,6 @@ DEPENDENCIES
   decidim-initiatives!
   decidim-sortitions!
   decidim-surveys!
-  decidim-term_customizer!
   good_job (~> 3.26)
   letter_opener_web (~> 2.0)
   listen (~> 3.1)

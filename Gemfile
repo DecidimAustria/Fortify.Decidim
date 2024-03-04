@@ -22,7 +22,7 @@ gem "decidim-accountability", DECIDIM_VERSION
 gem "decidim-sortitions", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", git: "https://github.com/decidim-ice/decidim-module-decidim_awesome.git", branch: "develop"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
+#gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
 gem "decidim-amazon_translate", git: "https://github.com/DecidimAustria/decidim-module-amazon_translate"
 
 gem 'aws-sdk-s3'
