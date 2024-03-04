@@ -89,4 +89,6 @@ Rails.application.configure do
     # Compress the HTML responses with gzip
     config.middleware.use Rack::Deflater
   end
+
+  config.active_job.queue_adapter = :good_job
 end
