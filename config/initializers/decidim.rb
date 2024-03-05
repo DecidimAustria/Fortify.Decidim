@@ -12,9 +12,10 @@ Decidim.configure do |config|
   # When an organization is created through the System area, system admins will
   # be able to choose the available languages for that organization. That list
   # of languages will be equal or a subset of the list in this file.
-  config.available_locales = Rails.application.secrets.decidim[:available_locales].presence || [:en]
+  #config.available_locales = Rails.application.secrets.decidim[:available_locales].presence || [:en]
   # Or block set it up manually and prevent ENV manipulation:
   # config.available_locales = %w(en ca es)
+  config.available_locales = %w(en de)
 
   # Sets the default locale for new organizations. When creating a new
   # organization from the System area, system admins will be able to overwrite
@@ -100,6 +101,11 @@ Decidim.configure do |config|
   #   static: { url: "https://staticmap.example.org/" },
   #   geocoding: { host: "nominatim.example.org", use_https: true }
   # }
+  config.maps = {
+    provider: :here,
+    api_key: ENV["MAPS_API_KEY"],
+    static: { url: "https://image.maps.ls.hereapi.com/mia/1.6/mapview" }
+  }
 
   # Geocoder configurations if you want to customize the default geocoding
   # settings. The maps configuration will manage which geocoding service to use,
@@ -340,6 +346,8 @@ Decidim.configure do |config|
   # end
   #
   # config.machine_translation_service = "MyTranslationService"
+  #config.machine_translation_service = "Decidim::AmazonTranslate::AmazonTranslator"
+  #config.machine_translation_delay = 0.seconds
 
   # Defines the social networking services used for social sharing
   config.social_share_services = Rails.application.secrets.decidim[:social_share_services]
