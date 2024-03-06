@@ -390,8 +390,9 @@ Decidim.configure do |config|
   # Read more: https://docs.decidim.org/en/develop/configure/initializer#_content_security_policy
   config.content_security_policies_extra = {
     "img-src": %w(https://cdn.participation.works),
+    "connect-src": %w(https://cdn.participation.works),
     "frame-src": %w(https://www.youtube.com)
-  }  
+  }
 
   # Admin admin password configurations
   Rails.application.secrets.dig(:decidim, :admin_password, :strong).tap do |strong_pw|
