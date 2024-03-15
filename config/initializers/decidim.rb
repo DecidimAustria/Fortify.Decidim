@@ -389,9 +389,10 @@ Decidim.configure do |config|
   # Defines additional content security policies following the structure
   # Read more: https://docs.decidim.org/en/develop/configure/initializer#_content_security_policy
   config.content_security_policies_extra = {
-    "img-src": %w(https://cdn.participation.works),
-    "connect-src": %w(https://cdn.participation.works),
-    "frame-src": %w(https://www.youtube.com)
+    "img-src": %w(self https://cdn.participation.works https://cdn.participation.works),
+    "connect-src": %w(self https://cdn.participation.works),
+    "frame-src": %w(self https://www.youtube.com),
+    "font-src": ["self", "data:"]
   }
 
   # Admin admin password configurations
